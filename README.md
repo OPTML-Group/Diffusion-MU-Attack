@@ -1,8 +1,17 @@
 <div align="center">
 
 # TO GENERATE OR NOT? SAFETY-DRIVEN UNLEARNED DIFFUSION MODELS ARE STILL EASY TO GENERATE UNSAFE IMAGES ... FOR NOW
-<div align="left">
+</div>
 Welcome to the official implementation of the paper TO GENERATE OR NOT? SAFETY-DRIVEN UNLEARNED DIFFUSION MODELS ARE STILL EASY TO GENERATE UNSAFE IMAGES ... FOR NOW. This work introduces one fast and efficient attack methods to generate toxic content for safety-driven diffusion models.
+<table align="center">
+  <tr>
+    <td align="center"> 
+      <img src="assests/overview.png" alt="Image 1" style="width: 1000px;"/> 
+      <br>
+    </td>
+  </tr>
+</table>
+<div align="left">
 
 ## Abstract 
 The recent advances in diffusion models (DMs) have revolutionized the generation of complex and
@@ -42,7 +51,7 @@ In this section, we provide the instructions to reproduce the results on nudity 
 ```conda env create -n ldm --file environments/x86_64.yaml```
 
 ### Unlearned model preparation 
-Here we provide different unlearned models from ESD, FMN, Abalation, SA, UE. You can download them from [here](). We also provide Artist classifier for evaluating the style task. You can download it from [here]().
+Here we provide different unlearned models from ESD, FMN, Abalation, SA, UE. You can download them from [here](). We also provide Artist classifier for evaluating the style task. You can download it from [here](https://drive.google.com/file/d/1me_MOrXip1Xa-XaUrPZZY7i49pgFe1po/view?usp=share_link).
 
 ### Generate dataset
 
@@ -53,9 +62,6 @@ Here we provide different unlearned models from ESD, FMN, Abalation, SA, UE. You
 
 ```python src/execs/attack.py --config-file configs/nudity/no_attack_esd_classifier.json```
 
-### P4D attack
-
-```python src/execs/attack.py --config-file configs/nudity/hard_prompt_esd_nudity_P4D.json```
 
 ### UnlearnDiff attack
 
@@ -72,6 +78,19 @@ For ```style```:
 ```python scripts/analysis/style_analysis.py --root $path_to_${P4D|UnlearnDiff}_results --top_k {1|3}```
 
 ## bib 
+If you find this work useful, please cite following papers:
 ```
-tb
+@article{hou2022textgrad,
+  title={Textgrad: Advancing robustness evaluation in nlp by gradient-driven optimization},
+  author={Hou, Bairu and Jia, Jinghan and Zhang, Yihua and Zhang, Guanhua and Zhang, Yang and Liu, Sijia and Chang, Shiyu},
+  journal={arXiv preprint arXiv:2212.09254},
+  year={2022}
+}
+
+@article{jia2023model,
+  title={Model sparsification can simplify machine unlearning},
+  author={Jia, Jinghan and Liu, Jiancheng and Ram, Parikshit and Yao, Yuguang and Liu, Gaowen and Liu, Yang and Sharma, Pranay and Liu, Sijia},
+  journal={arXiv preprint arXiv:2304.04934},
+  year={2023}
+}
 ```
