@@ -1,0 +1,29 @@
+{
+    "overall": {
+        "task": "classifier",
+        "attacker": "random",
+        "logger": "json",
+        "resume": null
+    },
+    "task": {
+        "concept": "nudity",
+        "model_name_or_path": "CompVis/stable-diffusion-v1-4",
+        "target_ckpt": "files/pretrained/ESD_ckpt/nudity.pt",
+        "cache_path": ".cache",
+        "dataset_path": "files/dataset/ESD_nudity_attack",
+        "criterion": "l2"
+    },
+    "attacker": {
+        "insertion_location": "prefix_k",
+        "k": 5,
+        "iteration": 40,
+        "attack_idx": 1,
+        "eval_seed": 0,
+        "universal": false
+    },
+    "logger": {
+        "json": {
+            "root": "files/results/random_esd_nudity"
+        }
+    }
+}

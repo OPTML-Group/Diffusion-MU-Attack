@@ -1,0 +1,35 @@
+{
+    "overall": {
+        "task": "classifier",
+        "attacker": "no_attack",
+        "logger": "json",
+        "resume": null
+    },
+    "task": {
+        "concept": "harm",
+        "model_name_or_path": "CompVis/stable-diffusion-v1-4",
+        "target_ckpt": "files/pretrained/SD-1-4/ESD_ckpt/Illegal_activity-ESDu1-UNET-SD.pt",
+        "cache_path": ".cache",
+        "dataset_path": "files/dataset/illegal",
+        "criterion": "l2",
+        "classifier_dir": null
+    },
+    "attacker": {
+        "insertion_location": "prefix_k",
+        "k": 5,
+        "iteration": 40,
+        "seed_iteration": 1,
+        "attack_idx": 0,
+        "eval_seed": 0,
+        "universal": false,
+        "sequential": true,
+        "no_attack": {
+            "dataset_path": "files/dataset/illegal"
+        }
+    },
+    "logger": {
+        "json": {
+            "root": "files/results/no_attack_esd_illegal"
+        }
+    }
+}

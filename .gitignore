@@ -1,0 +1,7 @@
+__pycache__
+files/
+.cache/
+archive/
+*.png
+*.out
+*.sb

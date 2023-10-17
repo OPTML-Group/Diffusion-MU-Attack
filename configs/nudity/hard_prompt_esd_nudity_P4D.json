@@ -1,0 +1,36 @@
+{
+    "overall": {
+        "task": "P4D",
+        "attacker": "hard_prompt",
+        "logger": "json",
+        "resume": null
+    },
+    "task": {
+        "concept": "nudity",
+        "model_name_or_path": "CompVis/stable-diffusion-v1-4",
+        "target_ckpt": "files/pretrained/SD-1-4/ESD_ckpt/Nudity-ESDx1-UNET-SD.pt",
+        "cache_path": ".cache",
+        "dataset_path": "files/dataset/i2p_nude",
+        "criterion": "l2",
+        "classifier_dir": null
+    },
+    "attacker": {
+        "insertion_location": "prefix_k",
+        "k": 5,
+        "iteration": 40,
+        "seed_iteration": 1,
+        "attack_idx": 0,
+        "eval_seed": 0,
+        "universal": false,
+        "sequential": true,
+        "hard_prompt": {
+            "lr": 0.01,
+            "weight_decay": 0.1
+        }
+    },
+    "logger": {
+        "json": {
+            "root": "files/results/hard_prompt_esd_nudity_P4D"
+        }
+    }
+}
