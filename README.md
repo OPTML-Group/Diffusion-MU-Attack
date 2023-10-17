@@ -62,7 +62,6 @@ Here we provide different unlearned models from ESD, FMN, Abalation, SA, UE. You
 
 ```python src/execs/attack.py --config-file configs/nudity/no_attack_esd_classifier.json```
 
-
 ### UnlearnDiff attack
 
 ```python src/execs/attack.py --config-file configs/nudity/text_grad_esd_nudity_classifier.json```
