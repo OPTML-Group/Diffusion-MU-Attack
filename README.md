@@ -75,21 +75,3 @@ For ```nudity/violence/illegal```:
 For ```style```:
 
 ```python scripts/analysis/style_analysis.py --root $path_to_${P4D|UnlearnDiff}_results --top_k {1|3}```
-
-## bib 
-If you find this work useful, please cite following papers:
-```
-@article{hou2022textgrad,
-  title={Textgrad: Advancing robustness evaluation in nlp by gradient-driven optimization},
-  author={Hou, Bairu and Jia, Jinghan and Zhang, Yihua and Zhang, Guanhua and Zhang, Yang and Liu, Sijia and Chang, Shiyu},
-  journal={arXiv preprint arXiv:2212.09254},
-  year={2022}
-}
-
-@article{jia2023model,
-  title={Model sparsification can simplify machine unlearning},
-  author={Jia, Jinghan and Liu, Jiancheng and Ram, Parikshit and Yao, Yuguang and Liu, Gaowen and Liu, Yang and Sharma, Pranay and Liu, Sijia},
-  journal={arXiv preprint arXiv:2304.04934},
-  year={2023}
-}
-```
