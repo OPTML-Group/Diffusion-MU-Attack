@@ -2,7 +2,7 @@
 
 # To Generate or Not? Safety-Driven Unlearned Diffusion Models Are Still Easy To Generate Unsafe Images ... For Now
 </div>
-Welcome to the official implementation of the paper TO GENERATE OR NOT? SAFETY-DRIVEN UNLEARNED DIFFUSION MODELS ARE STILL EASY TO GENERATE UNSAFE IMAGES ... FOR NOW. This work introduces one fast and efficient attack methods to generate toxic content for safety-driven diffusion models.
+Welcome to the official implementation of the paper "To Generate or Not? Safety-Driven Unlearned Diffusion Models Are Still Easy To Generate Unsafe Images ... For Now". This work introduces one fast and efficient attack methods to generate toxic content for safety-driven diffusion models.
 <table align="center">
   <tr>
     <td align="center"> 
