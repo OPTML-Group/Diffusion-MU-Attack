@@ -55,16 +55,20 @@ Here we provide different unlearned models from ESD and FMN. You can download th
 
 ### Generate dataset
 
-```python src/execs/generate_dataset.py --prompts_path prompts/nudity.csv --concept nudity --save-path files/dataset/i2p_nude```
+```python src/execs/generate_dataset.py --prompts_path prompts/nudity.csv --concept i2p_nude --save_path files/dataset```
 
 
 ### No attack
 
-```python src/execs/attack.py --config-file configs/nudity/no_attack_esd_classifier.json```
+```python src/execs/attack.py --config-file configs/nudity/no_attack_esd_classifier.json --attacker.attack_idx $i```
+
+where ```i``` is from ```[0,142)```
 
 ### UnlearnDiff attack
 
-```python src/execs/attack.py --config-file configs/nudity/text_grad_esd_nudity_classifier.json```
+```python src/execs/attack.py --config-file configs/nudity/text_grad_esd_nudity_classifier.json --attacker.attack_idx $i```
+
+where ```i``` is from ```[0,142)```
 
 ### Evaluation
 
