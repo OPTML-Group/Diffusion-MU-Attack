@@ -1,6 +1,8 @@
 <div align="center">
 
-# To Generate or Not? // Safety-Driven Unlearned Diffusion Models Are Still Easy To Generate Unsafe Images // ... For Now
+# To Generate or Not? 
+# Safety-Driven Unlearned Diffusion Models Are Still Easy To Generate Unsafe Images 
+# ... For Now
 </div>
 Welcome to the official implementation of the paper "To Generate or Not? Safety-Driven Unlearned Diffusion Models Are Still Easy To Generate Unsafe Images ... For Now". This work introduces one fast and efficient attack methods to generate toxic content for safety-driven diffusion models.
 <table align="center">
