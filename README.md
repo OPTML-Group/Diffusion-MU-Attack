@@ -79,3 +79,17 @@ For ```nudity/violence/illegal```:
 For ```style```:
 
 ```python scripts/analysis/style_analysis.py --root $path_to_${P4D|UnlearnDiff}_results --top_k {1|3}```
+
+
+### Citation
+
+```
+@misc{zhang2023muattack,
+      title={To Generate or Not? Safety-Driven Unlearned Diffusion Models Are Still Easy To Generate Unsafe Images ... For Now}, 
+      author={Yimeng Zhang and Jinghan Jia and Xin Chen and Aochuan Chen and Yihua Zhang and Jiancheng Liu and Ke Ding and Sijia Liu},
+      year={2023},
+      eprint={2310.11868},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
