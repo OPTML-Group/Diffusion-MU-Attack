@@ -60,13 +60,13 @@ Here we provide different unlearned models from ESD and FMN. You can download th
 
 ### No attack
 
-```python src/execs/attack.py --config-file configs/nudity/no_attack_esd_classifier.json --attacker.attack_idx $i```
+```python src/execs/attack.py --config-file configs/nudity/no_attack_esd_nudity_classifier.json --attacker.attack_idx $i --logger.name attack_idx_$i```
 
 where ```i``` is from ```[0,142)```
 
 ### UnlearnDiff attack
 
-```python src/execs/attack.py --config-file configs/nudity/text_grad_esd_nudity_classifier.json --attacker.attack_idx $i```
+```python src/execs/attack.py --config-file configs/nudity/text_grad_esd_nudity_classifier.json --attacker.attack_idx $i --logger.name attack_idx_$i```
 
 where ```i``` is from ```[0,142)```
 
