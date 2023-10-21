@@ -1,0 +1,29 @@
+{
+    "overall": {
+        "task": "classifier",
+        "attacker": "seed_search",
+        "logger": "json",
+        "resume": null
+    },
+    "task": {
+        "concept": "church",
+        "model_name_or_path": "CompVis/stable-diffusion-v1-4",
+        "target_ckpt": "files/pretrained/SD-1-4/ESD_ckpt/Church-ESDu1-UNET-SD.pt",
+        "cache_path": ".cache",
+        "dataset_path": "files/dataset/church",
+        "criterion": "l1"
+    },
+    "attacker": {
+        "insertion_location": "prefix_k",
+        "k": 3,
+        "iteration": 40,
+        "attack_idx": 1,
+        "eval_seed": 0,
+        "universal": false
+    },
+    "logger": {
+        "json": {
+            "root": "files/results/seed_search_esd_church"
+        }
+    }
+}
