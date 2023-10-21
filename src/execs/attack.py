@@ -34,7 +34,7 @@ Section('task', 'General task configs').params(
 )
 
 Section('attacker', 'General attacker configs').params(
-    insertion_location = Param(OneOf(['prefix_k', 'suffix_k', 'per_k_words']), default='prefix_k', desc='Insertion location'),
+    insertion_location = Param(OneOf(['prefix_k', 'suffix_k', 'mid_k', 'insert_k', 'per_k_words']), default='prefix_k', desc='Insertion location'),
     k = Param(int, default=3, desc='k in insertion_location'),
     iteration = Param(int, default=40, desc='Number of iterations'),
     seed_iteration = Param(int, default=20, desc='Number of seed iterations'),

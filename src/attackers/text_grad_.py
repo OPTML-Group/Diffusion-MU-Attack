@@ -90,10 +90,29 @@ class TextGrad(Attacker):
         return sot_id, mid_id, eot_id
     
     def construct_embd(self,adv_embedding):
-        if self.insertion_location == 'prefix_k':
+        if self.insertion_location == 'prefix_k':     # Prepend k words before the original prompt
             embedding = torch.cat([self.sot_embd,adv_embedding,self.mid_embd,self.eot_embd],dim=1)
-        elif self.insertion_location == 'suffix_k':
+        elif self.insertion_location == 'suffix_k':   # Append k words after the original prompt
             embedding = torch.cat([self.sot_embd,self.mid_embd,adv_embedding,self.eot_embd],dim=1)
+        elif self.insertion_location == 'mid_k':      # Insert k words in the middle of the original prompt
+            embedding = [self.sot_embd,]
+            total_num = self.mid_embd.size(1)
+            embedding.append(self.mid_embd[:,:total_num//2,:])
+            embedding.append(adv_embedding)
+            embedding.append(self.mid_embd[:,total_num//2:,:])
+            embedding.append(self.eot_embd)
+            embedding = torch.cat(embedding,dim=1)
+        elif self.insertion_location == 'insert_k':   # seperate k words into the original prompt with equal intervals
+            embedding = [self.sot_embd,]
+            total_num = self.mid_embd.size(1)
+            internals = total_num // (self.k+1)
+            for i in range(self.k):
+                embedding.append(self.mid_embd[:,internals*i:internals*(i+1),:])
+                embedding.append(adv_embedding[:,i,:].unsqueeze(1))
+            embedding.append(self.mid_embd[:,internals*(i+1):,:])
+            embedding.append(self.eot_embd)
+            embedding = torch.cat(embedding,dim=1)
+            
         elif self.insertion_location == 'per_k_words':
             embedding = [self.sot_embd,]
             for i in range(adv_embedding.size(1) - 1):
