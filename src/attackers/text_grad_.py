@@ -129,6 +129,27 @@ class TextGrad(Attacker):
             input_ids = torch.cat([sot_id,adv_id,mid_id,eot_id],dim=1)
         elif self.insertion_location == 'suffix_k':
             input_ids = torch.cat([sot_id,mid_id,adv_id,eot_id],dim=1)
+            
+        elif self.insertion_location == 'mid_k':
+            input_ids = [sot_id,]
+            total_num = mid_id.size(1)
+            input_ids.append(mid_id[:,:total_num//2])
+            input_ids.append(adv_id)
+            input_ids.append(mid_id[:,total_num//2:])
+            input_ids.append(eot_id)
+            input_ids = torch.cat(input_ids,dim=1)
+            
+        elif self.insertion_location == 'insert_k':
+            input_ids = [sot_id,]
+            total_num = mid_id.size(1)
+            internals = total_num // (self.k+1)
+            for i in range(self.k):
+                input_ids.append(mid_id[:,internals*i:internals*(i+1)])
+                input_ids.append(adv_id[:,i].unsqueeze(1))
+            input_ids.append(mid_id[:,internals*(i+1):])
+            input_ids.append(eot_id)
+            input_ids = torch.cat(input_ids,dim=1)
+            
         elif self.insertion_location == 'per_k_words':
             input_ids = [sot_id,]
             for i in range(adv_id.size(1) - 1):

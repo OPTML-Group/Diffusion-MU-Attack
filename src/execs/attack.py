@@ -21,8 +21,9 @@ Section('overall', 'Overall configs').params(
 )
 
 Section('task', 'General task configs').params(
-    concept = Param(OneOf(['vangogh', 'nudity', 'harm','cassette_player', 'church', 'english_springer', 'french_horn', 'garbage_truck', 'gas_pump', 'golf_ball', 'parachute', 'tench', 'chain_saw']), required=True, desc='Concept to attack'),
+    concept = Param(OneOf(['vangogh', 'nudity', 'harm', 'church', 'garbage_truck', 'parachute', 'tench']), required=True, desc='Concept to attack'),
     sld = Param(OneOf(['weak', 'medium', 'strong', 'max']), default=None, desc='SLD type'),
+    sld_concept = Param(str, default=None, desc='SLD concept to be unlearned'),
     negative_prompt = Param(str, default=None, desc='Negative prompt to be used'),
     model_name_or_path = Param(str, required=True, desc='Model directory'),
     target_ckpt = Param(File(), required=True, desc='Target model checkpoint'),

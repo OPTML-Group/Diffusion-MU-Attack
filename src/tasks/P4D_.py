@@ -19,6 +19,7 @@ class P4D_:
                 self,
                 concept,
                 sld,
+                sld_concept,
                 negative_prompt,
                 model_name_or_path,
                 target_ckpt,
@@ -34,6 +35,7 @@ class P4D_:
         self.device = "cuda:0" if torch.cuda.is_available() else "cpu"
         self.concept = concept 
         self.sld = sld
+        self.sld_concept = sld_concept
         self.negative_prompt = negative_prompt
         self.cache_path = cache_path
         self.sampling_step_num = sampling_step_num
@@ -120,9 +122,12 @@ class P4D_:
         
         # Generate safety embedding for SLD
         if self.sld is not None:
-            safety_concept = 'hate, harassment, violence, suffering, humiliation, harm, suicide, ' \
-                                        'sexual, nudity, bodily fluids, blood, obscene gestures, illegal activity, ' \
-                                        'drug use, theft, vandalism, weapons, child abuse, brutality, cruelty'
+            if self.sld_concept is not None:
+                safety_concept = str(self.sld_concept)
+            else:
+                safety_concept = 'hate, harassment, violence, suffering, humiliation, harm, suicide, ' \
+                                            'sexual, nudity, bodily fluids, blood, obscene gestures, illegal activity, ' \
+                                            'drug use, theft, vandalism, weapons, child abuse, brutality, cruelty'
 
             safety_input = self.tokenizer(
                 [safety_concept] * batch_size, padding="max_length", max_length=self.tokenizer.model_max_length, return_tensors="pt"
