@@ -42,10 +42,29 @@ class HardPromptAttacker(Attacker):
         return sot_id, mid_id, eot_id
     
     def construct_embd(self,adv_embedding):
-        if self.insertion_location == 'prefix_k':
+        if self.insertion_location == 'prefix_k':     # Prepend k words before the original prompt
             embedding = torch.cat([self.sot_embd,adv_embedding,self.mid_embd,self.eot_embd],dim=1)
-        elif self.insertion_location == 'suffix_k':
+        elif self.insertion_location == 'suffix_k':   # Append k words after the original prompt
             embedding = torch.cat([self.sot_embd,self.mid_embd,adv_embedding,self.eot_embd],dim=1)
+        elif self.insertion_location == 'mid_k':      # Insert k words in the middle of the original prompt
+            embedding = [self.sot_embd,]
+            total_num = self.mid_embd.size(1)
+            embedding.append(self.mid_embd[:,:total_num//2,:])
+            embedding.append(adv_embedding)
+            embedding.append(self.mid_embd[:,total_num//2:,:])
+            embedding.append(self.eot_embd)
+            embedding = torch.cat(embedding,dim=1)
+        elif self.insertion_location == 'insert_k':   # seperate k words into the original prompt with equal intervals
+            embedding = [self.sot_embd,]
+            total_num = self.mid_embd.size(1)
+            internals = total_num // (self.k+1)
+            for i in range(self.k):
+                embedding.append(self.mid_embd[:,internals*i:internals*(i+1),:])
+                embedding.append(adv_embedding[:,i,:].unsqueeze(1))
+            embedding.append(self.mid_embd[:,internals*(i+1):,:])
+            embedding.append(self.eot_embd)
+            embedding = torch.cat(embedding,dim=1)
+            
         elif self.insertion_location == 'per_k_words':
             embedding = [self.sot_embd,]
             for i in range(adv_embedding.size(1) - 1):
@@ -62,6 +81,27 @@ class HardPromptAttacker(Attacker):
             input_ids = torch.cat([sot_id,adv_id,mid_id,eot_id],dim=1)
         elif self.insertion_location == 'suffix_k':
             input_ids = torch.cat([sot_id,mid_id,adv_id,eot_id],dim=1)
+            
+        elif self.insertion_location == 'mid_k':
+            input_ids = [sot_id,]
+            total_num = mid_id.size(1)
+            input_ids.append(mid_id[:,:total_num//2])
+            input_ids.append(adv_id)
+            input_ids.append(mid_id[:,total_num//2:])
+            input_ids.append(eot_id)
+            input_ids = torch.cat(input_ids,dim=1)
+            
+        elif self.insertion_location == 'insert_k':
+            input_ids = [sot_id,]
+            total_num = mid_id.size(1)
+            internals = total_num // (self.k+1)
+            for i in range(self.k):
+                input_ids.append(mid_id[:,internals*i:internals*(i+1)])
+                input_ids.append(adv_id[:,i].unsqueeze(1))
+            input_ids.append(mid_id[:,internals*(i+1):])
+            input_ids.append(eot_id)
+            input_ids = torch.cat(input_ids,dim=1)
+            
         elif self.insertion_location == 'per_k_words':
             input_ids = [sot_id,]
             for i in range(adv_id.size(1) - 1):
