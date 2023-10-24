@@ -84,12 +84,10 @@ For ```style```:
 ### Citation
 
 ```
-@misc{zhang2023muattack,
-      title={To Generate or Not? Safety-Driven Unlearned Diffusion Models Are Still Easy To Generate Unsafe Images ... For Now}, 
-      author={Yimeng Zhang and Jinghan Jia and Xin Chen and Aochuan Chen and Yihua Zhang and Jiancheng Liu and Ke Ding and Sijia Liu},
-      year={2023},
-      eprint={2310.11868},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@article{zhang2023generate,
+  title={To Generate or Not? Safety-Driven Unlearned Diffusion Models Are Still Easy To Generate Unsafe Images... For Now},
+  author={Zhang, Yimeng and Jia, Jinghan and Chen, Xin and Chen, Aochuan and Zhang, Yihua and Liu, Jiancheng and Ding, Ke and Liu, Sijia},
+  journal={arXiv preprint arXiv:2310.11868},
+  year={2023}
 }
 ```
