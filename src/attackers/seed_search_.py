@@ -16,6 +16,8 @@ class SeedSearchAttacker(Attacker):
         _, prompt, seed, guidance = task.dataset[self.attack_idx]
         if seed is None:
             seed = np.random.random_integers(9e9)
+            
+        task.tokenizer.pad_token = task.tokenizer.eos_token
 
         prompt_id = task.str2id(prompt)
 

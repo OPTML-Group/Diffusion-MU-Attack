@@ -17,6 +17,9 @@ class NoAttacker(Attacker):
         image, prompt, seed, guidance = task.dataset[self.attack_idx]
         if seed is None:
             seed = self.eval_seed
+            
+        task.tokenizer.pad_token = task.tokenizer.eos_token
+        
         viusalize_prompt_id = task.str2id(prompt)
 
         ### Visualization for the original prompt:
