@@ -176,6 +176,8 @@ class TextGrad(Attacker):
         
         if seed is None:
             seed = self.eval_seed
+            
+        task.tokenizer.pad_token = task.tokenizer.eos_token
 
         viusalize_prompt_id = task.str2id(prompt)
         visualize_embedding = task.id2embedding(viusalize_prompt_id)
