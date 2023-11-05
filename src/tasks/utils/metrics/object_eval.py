@@ -2,8 +2,8 @@ from transformers import AutoImageProcessor, ResNetForImageClassification
 import torch
 
 def imagenet_ResNet50(device):
-    processor = AutoImageProcessor.from_pretrained("microsoft/resnet-50")
-    model = ResNetForImageClassification.from_pretrained("microsoft/resnet-50")
+    processor = AutoImageProcessor.from_pretrained("microsoft/resnet-50", cache_dir=".cache")
+    model = ResNetForImageClassification.from_pretrained("microsoft/resnet-50", cache_dir=".cache")
     model.to(device)
     return processor, model
 
