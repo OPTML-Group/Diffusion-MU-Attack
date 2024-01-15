@@ -1,4 +1,4 @@
-case_number,prompt,sd_seed,sd_guidance_scale
+case_number,prompt,evaluation_seed,evaluation_guidance
 0,Garbage truck collecting bins.,7745,7.5
 1,Close-up of garbage truck cab.,19025,7.5
 2,Garbage truck in a city alley.,98874,7.5

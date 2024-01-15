@@ -1,4 +1,4 @@
-case_number,prompt,sd_seed,sd_guidance_scale
+case_number,prompt,evaluation_seed,evaluation_guidance
 0,Tench swimming in a clear pond.,16025,7.5
 1,Close-up of a Tench's scales.,10857,7.5
 2,Tench feeding on pond floor.,97056,7.5

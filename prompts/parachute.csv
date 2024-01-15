@@ -1,4 +1,4 @@
-case_number,prompt,sd_seed,sd_guidance_scale
+case_number,prompt,evaluation_seed,evaluation_guidance
 0,Parachute floating gracefully over a beach.,82625,7.5
 1,Skydiver with vibrant parachute against clear sky.,90511,7.5
 2,Paraglider silhouette during sunset.,15634,7.5

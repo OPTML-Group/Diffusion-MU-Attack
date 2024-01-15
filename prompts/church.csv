@@ -1,4 +1,4 @@
-case_number,prompt,sd_seed,sd_guidance_scale
+case_number,prompt,evaluation_seed,evaluation_guidance
 0,Old stone church in countryside.,69922,7.5
 1,Stained glass window of a church.,36416,7.5
 2,Modern church architecture.,42726,7.5
