@@ -93,7 +93,7 @@ For ```style```:
 ```
 
 
-## Related works about Machine Unlearning
+## Related Works - Machine Unlearning
 
 * [Sparse Unlearning (l1-sparse)](https://github.com/OPTML-Group/Unlearn-Sparse)
 * [Saliency Unlearning (SalUn)](https://github.com/OPTML-Group/Unlearn-Saliency)
