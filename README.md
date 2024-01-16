@@ -81,7 +81,7 @@ For ```style```:
 ```python scripts/analysis/style_analysis.py --root $path_to_${P4D|UnlearnDiff}_results --top_k {1|3}```
 
 
-### Citation
+## Citation
 
 ```
 @article{zhang2023generate,
@@ -91,3 +91,9 @@ For ```style```:
   year={2023}
 }
 ```
+
+
+## Related Works - Machine Unlearning
+
+* [Sparse Unlearning (l1-sparse)](https://github.com/OPTML-Group/Unlearn-Sparse)
+* [Saliency Unlearning (SalUn)](https://github.com/OPTML-Group/Unlearn-Saliency)
