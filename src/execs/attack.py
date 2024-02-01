@@ -97,22 +97,18 @@ Section('logger.json', 'JSON logger').enable_if(
 
 class Main:
 
-    def __init__(self) -> None:
-        self.make_config()
+    def __init__(self, config_file, model_name_or_path) -> None:
+        self.make_config(config_file, model_name_or_path)
         self.setup_seed()
         self.init_task()
         self.init_attacker()
         self.init_logger()
         self.run()
 
-    def make_config(self, quiet=False):
+    def make_config(self, config_file, model_name_or_path, quiet=False):
         self.config = get_current_config()
-        parser = argparse.ArgumentParser("Stable Diffusion Text-level Attack")
-        self.config.augment_argparse(parser)
-        self.config.collect_argparse_args(parser)
-
-        if self.config['overall.resume'] is not None:
-            self.config.collect_config_file(os.path.join(self.config['overall.resume'], 'config.json'))
+        self.config = self.config.collect_config_file(config_file)
+        self.config = self.config.collect({"task.model_name_or_path": model_name_or_path})
 
         self.config.validate()
         if not quiet:
@@ -153,4 +149,6 @@ class Main:
 
 
 if __name__ == '__main__':
-    Main()
+    config_file = None
+    model_name_or_path = None
+    Main(config_file, model_name_or_path)
