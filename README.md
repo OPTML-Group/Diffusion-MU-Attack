@@ -74,7 +74,7 @@ where ```i``` is from ```[0,142)```
 
 ### Evaluation
 
-For ```nudity/violence/illegal```:
+For ```nudity/violence/illegal/objects```:
 
 ```python scripts/analysis/check_asr.py --root-no-attack $path_to_no_attack_results --root $path_to_${P4D|UnlearnDiff}_results ```
 
