@@ -5,7 +5,7 @@
 
 ###  [Project Website](https://www.optml-group.com/posts/mu_attack) | [Arxiv Preprint](https://arxiv.org/abs/2310.11868) |
 
-Welcome to the official implementation of UnlearnDiff Attack. This work introduces one fast and efficient attack method to generate toxic content for safety-driven diffusion models.
+Welcome to the official implementation of UnlearnDiff Attack, which capitalizes on the intrinsic classification abilities of DMs to simplify the creation of adversarial prompts, thereby eliminating the need for auxiliary classification or diffusion models.Through extensive benchmarking, we evaluate the robustness of five widely-used safety-driven unlearned DMs (i.e., DMs after unlearning undesirable concepts, styles, or objects) across a variety of tasks.
 <table align="center">
   <tr>
     <td align="center"> 
