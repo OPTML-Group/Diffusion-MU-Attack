@@ -2,9 +2,10 @@
 
 # To Generate or Not? <br> Safety-Driven Unlearned Diffusion Models <br> Are Still Easy To Generate Unsafe Images <br> ... For Now
 </div>
-Welcome to the official implementation of the paper: 
 
-[To Generate or Not? Safety-Driven Unlearned Diffusion Models Are Still Easy To Generate Unsafe Images ... For Now](https://arxiv.org/abs/2310.11868). This work introduces one fast and efficient attack method to generate toxic content for safety-driven diffusion models.
+###  [Project Website](https://www.optml-group.com/posts/mu_attack) | [Arxiv Preprint](https://arxiv.org/abs/2310.11868) |
+
+Welcome to the official implementation of UnlearnDiff Attack. This work introduces one fast and efficient attack method to generate toxic content for safety-driven diffusion models.
 <table align="center">
   <tr>
     <td align="center"> 
