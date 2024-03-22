@@ -8,9 +8,9 @@
     "task": {
         "concept": "church",
         "model_name_or_path": "CompVis/stable-diffusion-v1-4",
-        "target_ckpt": "files/pretrained/SD-1-4/ESD_ckpt/Church-ESDu1-UNET-SD.pt",
+        "target_ckpt": "/home/jiqingfe/Diffusion-MU-Attack/files/pretrained/SD-1-4/ESD_ckpt/Church-ESDu1-UNET-SD.pt",
         "cache_path": ".cache",
-        "dataset_path": "files/dataset/church",
+        "dataset_path": "/home/jiqingfe/Diffusion-MU-Attack/files/dataset/church",
         "criterion": "l2",
         "classifier_dir": null
     },
@@ -30,7 +30,8 @@
     },
     "logger": {
         "json": {
-            "root": "files/results/text_grad_esd_church_classifier"
-        }
+            "root": "/home/jiqingfe/Diffusion-MU-Attack/files/results/text_grad_esd_church_classifier"
+        },
+        "name":"attack_idx_7"
     }
 }

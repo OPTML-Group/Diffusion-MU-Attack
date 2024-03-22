@@ -8,9 +8,9 @@
     "task": {
         "concept": "vangogh",
         "model_name_or_path": "CompVis/stable-diffusion-v1-4",
-        "target_ckpt": "files/pretrained/SD-1-4/ESD_ckpt/VanGogh-ESDx1-UNET-SD.pt",
+        "target_ckpt": "/home/jiqingfe/Diffusion-MU-Attack/files/pretrained/SD-1-4/ESD_ckpt/VanGogh-ESDx1-UNET-SD.pt",
         "cache_path": ".cache",
-        "dataset_path": "files/dataset/vangogh",
+        "dataset_path": "/home/jiqingfe/Diffusion-MU-Attack/files/dataset/vangogh",
         "criterion": "l2",
         "classifier_dir":"results/checkpoint-2800"
     },
@@ -29,7 +29,8 @@
     },
     "logger": {
         "json": {
-            "root": "files/results/text_grad_esd_vangogh_classifier"
-        }
+            "root": "/home/jiqingfe/Diffusion-MU-Attack/files/results/text_grad_esd_vangogh_classifier"
+        },
+        "name": "attack_idx_7"
     }
 }
