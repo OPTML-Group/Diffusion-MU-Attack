@@ -2,7 +2,10 @@
 
 # To Generate or Not? <br> Safety-Driven Unlearned Diffusion Models <br> Are Still Easy To Generate Unsafe Images <br> ... For Now
 </div>
-Welcome to the official implementation of the paper: [To Generate or Not? Safety-Driven Unlearned Diffusion Models Are Still Easy To Generate Unsafe Images ... For Now](https://arxiv.org/abs/2310.11868). This work introduces one fast and efficient attack methods to generate toxic content for safety-driven diffusion models.
+
+###  [Project Website](https://www.optml-group.com/posts/mu_attack) | [Arxiv Preprint](https://arxiv.org/abs/2310.11868) |
+
+Welcome to the official implementation of UnlearnDiff Attack, which capitalizes on the intrinsic classification abilities of DMs to simplify the creation of adversarial prompts, thereby eliminating the need for auxiliary classification or diffusion models.Through extensive benchmarking, we evaluate the robustness of five widely-used safety-driven unlearned DMs (i.e., DMs after unlearning undesirable concepts, styles, or objects) across a variety of tasks.
 <table align="center">
   <tr>
     <td align="center"> 
@@ -51,7 +54,7 @@ In this section, we provide the instructions to reproduce the results on nudity 
 ```conda env create -n ldm --file environments/x86_64.yaml```
 
 ### Unlearned model preparation 
-Here we provide different unlearned models from ESD and FMN. You can download them from [here](https://drive.google.com/file/d/1f4gncLqMXXdlbxpiFtY0WefDL1YUr9b7/view?usp=sharing). We also provide an Artist classifier for evaluating the style task. You can download it from [here](https://drive.google.com/file/d/1me_MOrXip1Xa-XaUrPZZY7i49pgFe1po/view?usp=share_link).
+We provide different unlearned models (ESD and FMN), and you can download them from [[Object](https://drive.google.com/file/d/11FNKE_zzm8NMvUQn2_UPWzZRQFd4Frgb/view?usp=sharing) , [Others](https://drive.google.com/file/d/1f4gncLqMXXdlbxpiFtY0WefDL1YUr9b7/view?usp=sharing)]. We also provide an Artist classifier for evaluating the style task. You can download it from [here](https://drive.google.com/file/d/1me_MOrXip1Xa-XaUrPZZY7i49pgFe1po/view?usp=share_link).
 
 ### Generate dataset
 
@@ -72,7 +75,7 @@ where ```i``` is from ```[0,142)```
 
 ### Evaluation
 
-For ```nudity/violence/illegal```:
+For ```nudity/violence/illegal/objects```:
 
 ```python scripts/analysis/check_asr.py --root-no-attack $path_to_no_attack_results --root $path_to_${P4D|UnlearnDiff}_results ```
 
