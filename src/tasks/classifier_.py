@@ -51,7 +51,11 @@ class ClassifierTask:
         self.unet_sd = UNet2DConditionModel.from_pretrained(model_name_or_path, subfolder="unet", cache_dir=cache_path).to(self.device)
         self.target_unet_sd = deepcopy(self.unet_sd)
         if self.sld is None:
-            self.target_unet_sd.load_state_dict(torch.load(target_ckpt, map_location=self.device))
+            # Load target checkpoint for U-Net or Text Encoder
+            if 'TextEncoder' in target_ckpt or 'text_encoder' in target_ckpt:
+                self.custom_text_encoder.load_state_dict(torch.load(target_ckpt, map_location=self.device), strict=False)
+            else:
+                self.target_unet_sd.load_state_dict(torch.load(target_ckpt, map_location=self.device))
         if classifier_dir is not None:
             self.classifier = init_classifier(self.device,classifier_dir)
         elif self.concept in self.object_list:

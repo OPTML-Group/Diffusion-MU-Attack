@@ -34,6 +34,8 @@ robustness of five prevalent unlearned DMs across multiple tasks. Our results un
 tiveness and efficiency of UnlearnDiff when compared to state-of-the-art adversarial prompting
 methods
 
+<br>
+
 ## Code Structure
 ```configs```: contains the default parameter for each methods
 
@@ -46,20 +48,27 @@ methods
 * ```execs```: contains the main execution files to run experiments
 * ```loggers```: contains the logger codes for the experiments
 
-## Usage
-In this section, we provide the instructions to reproduce the results on nudity (ESD) in our paper. You can change the config file path to reproduce the results on other concepts or unlearned models.
+<br>
 
-### Requirements
+## Prepare
 
-```conda env create -n ldm --file environments/x86_64.yaml```
+### Environment Setup
+```
+conda env create -n ldm --file environments/x86_64.yaml
+```
 
 ### Unlearned model preparation 
 We provide different unlearned models (ESD and FMN), and you can download them from [[Object](https://drive.google.com/file/d/11FNKE_zzm8NMvUQn2_UPWzZRQFd4Frgb/view?usp=sharing) , [Others](https://drive.google.com/file/d/1f4gncLqMXXdlbxpiFtY0WefDL1YUr9b7/view?usp=sharing)]. We also provide an Artist classifier for evaluating the style task. You can download it from [here](https://drive.google.com/file/d/1me_MOrXip1Xa-XaUrPZZY7i49pgFe1po/view?usp=share_link).
 
-### Generate dataset
+### Generate dataset (for unlearning robustness evaluation)
 
 ```python src/execs/generate_dataset.py --prompts_path prompts/nudity.csv --concept i2p_nude --save_path files/dataset```
 
+
+<br>
+
+## Code Implementation
+In this section, we provide the instructions to reproduce the results on nudity (ESD) in our paper. You can change the config file path to reproduce the results on other concepts or unlearned models.
 
 ### No attack
 
@@ -77,12 +86,14 @@ where ```i``` is from ```[0,142)```
 
 For ```nudity/violence/illegal/objects```:
 
-```python scripts/analysis/check_asr.py --root-no-attack $path_to_no_attack_results --root $path_to_${P4D|UnlearnDiff}_results ```
+```python scripts/analysis/check_asr.py --root-no-attack $path_to_no_attack_results --root $path_to_${P4D|UnlearnDiff}_results```
 
 For ```style```:
 
 ```python scripts/analysis/style_analysis.py --root $path_to_${P4D|UnlearnDiff}_results --top_k {1|3}```
 
+
+<br>
 
 ## Citation
 
@@ -94,9 +105,10 @@ For ```style```:
   year={2023}
 }
 ```
-
+<br>
 
 ## Related Works - Machine Unlearning
 
+* [Adversarial Unlearning (AdvUnlearn)](https://github.com/OPTML-Group/AdvUnlearn)
 * [Sparse Unlearning (l1-sparse)](https://github.com/OPTML-Group/Unlearn-Sparse)
 * [Saliency Unlearning (SalUn)](https://github.com/OPTML-Group/Unlearn-Saliency)
