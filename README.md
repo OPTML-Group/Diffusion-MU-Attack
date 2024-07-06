@@ -58,7 +58,7 @@ We will evaluate your model on UnlearnDiffAtk Benchmark! Open a [github issue](h
 | [EraseDiff (ED)](https://github.com/JingWu321/EraseDiff)                                                     | 0.00    | 2.11     | 233   | 0.18       |
 | [ScissorHands (SH)](https://github.com/JingWu321/Scissorhands)                                               | 0.00    | 7.04     | 128.53| 0.235      |
 | [Saliency Unlearning (SalUn)](https://github.com/OPTML-Group/Unlearn-Saliency)                               | 1.41    | 11.27    | 33.62 | 0.287      |
-| [Defensive Unlearning with AT (AdvUnlearn)](https://github.com/OPTML-Group/AdvUnlearn)                       | 7.75    | 21.13    | 19.34 | 0.290      |
+| [Adversarial Unlearning (AdvUnlearn)](https://github.com/OPTML-Group/AdvUnlearn)                       | 7.75    | 21.13    | 19.34 | 0.290      |
 | [Erased Stable Diffusion (ESD)](https://github.com/rohitgandikota/erasing)                                   | 20.42   | 76.05    | 18.18 | 0.302      |
 | [Unified Concept Editing (UCE)](https://github.com/rohitgandikota/unified-concept-editing)                   | 21.83   | 79.58    | 17.10 | 0.309      |
 | [Forget-Me-Not (FMN)](https://github.com/SHI-Labs/Forget-Me-Not)                                             | 88.03   | 97.89    | 16.86 | 0.308      |
