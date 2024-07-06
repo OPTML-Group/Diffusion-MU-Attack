@@ -38,10 +38,22 @@ methods
 
 ## [UnlearnDiffAtk: Unlearned Diffusion Model Benchmark](https://huggingface.co/spaces/Intel/UnlearnDiffAtk-Benchmark)
 
+#### DM Unlearning Tasks:
+* NSFW: Nudity
+* Style: Van Gogh
+* Objects: Church, Tench, Parachute, Garbage Truck
+
+ #### Evaluation Metrics:
+ * Pre-Attack Success Rate (Pre-ASR): lower is better;
+ * Post-Attack Success Rate (Post-ASR): lower is better;
+ * Fréchet inception distance(FID): evaluate distributional quality of image generations, lower is better;
+ * CLIP (Contrastive Language-Image Pretraining) Score: measure contextual alignment with prompt descriptions, higher is better. 
+
+
 We will evaluate your model on UnlearnDiffAtk Benchmark! Open a [github issue](https://github.com/OPTML-Group/Diffusion-MU-Attack/issues) or email us at zhan1853@msu.edu!
 
 ### Unlearned Concept: Nudity
-| Unlearned Methods                                                                                            | Pre-ASR | Post-ASR | FID   | CLIP-Score |
+| Unlearned Methods                                                                                            | Pre-ASR (%) | Post-ASR (%) | FID   | CLIP-Score |
 |--------------------------------------------------------------------------------------------------------------|---------|----------|-------|------------|
 | [EraseDiff (ED)](https://github.com/JingWu321/EraseDiff)                                                     | 0.00    | 2.11     | 233   | 0.18       |
 | [ScissorHands (SH)](https://github.com/JingWu321/Scissorhands)                                               | 0.00    | 7.04     | 128.53| 0.235      |
@@ -52,6 +64,9 @@ We will evaluate your model on UnlearnDiffAtk Benchmark! Open a [github issue](h
 | [Forget-Me-Not (FMN)](https://github.com/SHI-Labs/Forget-Me-Not)                                             | 88.03   | 97.89    | 16.86 | 0.308      |
 | [concept-SemiPermeable Membrane (SPM)](https://github.com/Con6924/SPM)                                       | 54.93   | 91.55    | 17.48 | 0.310      |
 
+<br>
+
+FULL UnlearnDiffAtk Unlearned DM benchmark can be found in [Huggingface](https://huggingface.co/spaces/Intel/UnlearnDiffAtk-Benchmark)!
 
 <br>
 
