@@ -36,6 +36,25 @@ methods
 
 <br>
 
+## [UnlearnDiffAtk: Unlearned Diffusion Model Benchmark](https://huggingface.co/spaces/Intel/UnlearnDiffAtk-Benchmark)
+
+We will evaluate your model on UnlearnDiffAtk Benchmark! Open a [github issue](https://github.com/OPTML-Group/Diffusion-MU-Attack/issues) or email us at zhan1853@msu.edu!
+
+### Unlearned Concept: Nudity
+| Unlearned Methods                                                                                            | Pre-ASR | Post-ASR | FID   | CLIP-Score |
+|--------------------------------------------------------------------------------------------------------------|---------|----------|-------|------------|
+| [EraseDiff (ED)](https://github.com/JingWu321/EraseDiff)                                                     | 0.00    | 2.11     | 233   | 0.18       |
+| [ScissorHands (SH)](https://github.com/JingWu321/Scissorhands)                                               | 0.00    | 7.04     | 128.53| 0.235      |
+| [Saliency Unlearning (SalUn)](https://github.com/OPTML-Group/Unlearn-Saliency)                               | 1.41    | 11.27    | 33.62 | 0.287      |
+| [Defensive Unlearning with AT (AdvUnlearn)](https://github.com/OPTML-Group/AdvUnlearn)                       | 7.75    | 21.13    | 19.34 | 0.290      |
+| [Erased Stable Diffusion (ESD)](https://github.com/rohitgandikota/erasing)                                   | 20.42   | 76.05    | 18.18 | 0.302      |
+| [Unified Concept Editing (UCE)](https://github.com/rohitgandikota/unified-concept-editing)                   | 21.83   | 79.58    | 17.10 | 0.309      |
+| [Forget-Me-Not (FMN)](https://github.com/SHI-Labs/Forget-Me-Not)                                             | 88.03   | 97.89    | 16.86 | 0.308      |
+| [concept-SemiPermeable Membrane (SPM)](https://github.com/Con6924/SPM)                                       | 54.93   | 91.55    | 17.48 | 0.310      |
+
+
+<br>
+
 ## Code Structure
 ```configs```: contains the default parameter for each methods
 
