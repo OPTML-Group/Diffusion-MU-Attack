@@ -5,7 +5,7 @@
 
 ###  [Project Website](https://www.optml-group.com/posts/mu_attack) | [Arxiv Preprint](https://arxiv.org/abs/2310.11868) | [Unlearned DM Benchmark](https://huggingface.co/spaces/Intel/UnlearnDiffAtk-Benchmark) | [Demo](https://huggingface.co/spaces/Intel/UnlearnDiffAtk)
 
-Welcome to the official implementation of UnlearnDiff Attack, which capitalizes on the intrinsic classification abilities of DMs to simplify the creation of adversarial prompts, thereby eliminating the need for auxiliary classification or diffusion models.Through extensive benchmarking, we evaluate the robustness of five widely-used safety-driven unlearned DMs (i.e., DMs after unlearning undesirable concepts, styles, or objects) across a variety of tasks.
+Welcome to the official implementation of <strong>UnlearnDiffAtk</strong>, which capitalizes on the intrinsic classification abilities of Diffusion Models (DMs) to <strong>simplify the creation of adversarial prompts</strong>, thereby eliminating the need for auxiliary classification or diffusion models.Through extensive benchmarking, we <strong>evaluate the robustness</strong> of five widely-used safety-driven unlearned DMs (i.e., DMs after unlearning undesirable concepts, styles, or objects) across a variety of tasks.
 <table align="center">
   <tr>
     <td align="center"> 
@@ -23,15 +23,12 @@ tion of harmful content and infringement of data copyrights. Although there have
 create safety-driven unlearning methods to counteract these challenges, doubts remain about their
 capabilities. To bridge this uncertainty, we propose an evaluation framework built upon adversarial
 attacks (also referred to as adversarial prompts), in order to discern the trustworthiness of these
-safety-driven unlearned DMs. Specifically, our research explores the (worst-case) robustness of un-
-learned DMs in eradicating unwanted concepts, styles, and objects, assessed by the generation of
-adversarial prompts. We develop a novel adversarial learning approach called UnlearnDiff that
+safety-driven unlearned DMs. Specifically, our research explores the <strong>(worst-case) robustness of unlearned DMs</strong> in eradicating unwanted concepts, styles, and objects, assessed by the generation of
+adversarial prompts. <strong>We develop a novel adversarial learning approach called UnlearnDiff that
 leverages the inherent classification capabilities of DMs to streamline the generation of adversarial
-prompts, making it as simple for DMs as it is for image classification attacks. This technique stream-
-lines the creation of adversarial prompts, making the process as intuitive for generative modeling as it
+prompts, making it as simple for DMs as it is for image classification attacks.</strong> This technique streamlines the creation of adversarial prompts, making the process as intuitive for generative modeling as it
 is for image classification assaults. Through comprehensive benchmarking, we assess the unlearning
-robustness of five prevalent unlearned DMs across multiple tasks. Our results underscore the effec-
-tiveness and efficiency of UnlearnDiff when compared to state-of-the-art adversarial prompting
+robustness of five prevalent unlearned DMs across multiple tasks. Our results underscore the effectiveness and efficiency of UnlearnDiff when compared to state-of-the-art adversarial prompting
 methods
 
 <br>
@@ -39,18 +36,16 @@ methods
 ## [UnlearnDiffAtk: Unlearned Diffusion Model Benchmark](https://huggingface.co/spaces/Intel/UnlearnDiffAtk-Benchmark)
 
 #### DM Unlearning Tasks:
-* NSFW: Nudity
-* Style: Van Gogh
-* Objects: Church, Tench, Parachute, Garbage Truck
+* <strong>NSFW</strong>: Nudity
+* <strong>Style</strong>: Van Gogh
+* <strong>Object</strong>: Church, Tench, Parachute, Garbage Truck
 
  #### Evaluation Metrics:
- * Pre-Attack Success Rate (Pre-ASR): lower is better;
- * Post-Attack Success Rate (Post-ASR): lower is better;
- * Fréchet inception distance(FID): evaluate distributional quality of image generations, lower is better;
- * CLIP (Contrastive Language-Image Pretraining) Score: measure contextual alignment with prompt descriptions, higher is better. 
+ * Pre-Attack Success Rate (<strong>Pre-ASR</strong>): lower is better;
+ * Post-Attack Success Rate (<strong>Post-ASR</strong>): lower is better;
+ * Fréchet inception distance(<strong>FID</strong>): evaluate distributional quality of image generations, lower is better;
+ * <strong>CLIP Score</strong>: measure contextual alignment with prompt descriptions, higher is better. 
 
-
-We will evaluate your model on UnlearnDiffAtk Benchmark! Open a [github issue](https://github.com/OPTML-Group/Diffusion-MU-Attack/issues) or email us at zhan1853@msu.edu!
 
 ### Unlearned Concept: Nudity
 | Unlearned Methods                                                                                            | Pre-ASR (%) | Post-ASR (%) | FID   | CLIP-Score |
@@ -58,15 +53,17 @@ We will evaluate your model on UnlearnDiffAtk Benchmark! Open a [github issue](h
 | [EraseDiff (ED)](https://github.com/JingWu321/EraseDiff)                                                     | 0.00    | 2.11     | 233   | 0.18       |
 | [ScissorHands (SH)](https://github.com/JingWu321/Scissorhands)                                               | 0.00    | 7.04     | 128.53| 0.235      |
 | [Saliency Unlearning (SalUn)](https://github.com/OPTML-Group/Unlearn-Saliency)                               | 1.41    | 11.27    | 33.62 | 0.287      |
-| [Adversarial Unlearning (AdvUnlearn)](https://github.com/OPTML-Group/AdvUnlearn)                       | 7.75    | 21.13    | 19.34 | 0.290      |
+| [Adversarial Unlearning (AdvUnlearn)](https://github.com/OPTML-Group/AdvUnlearn)                             | 7.75    | 21.13    | 19.34 | 0.290      |
 | [Erased Stable Diffusion (ESD)](https://github.com/rohitgandikota/erasing)                                   | 20.42   | 76.05    | 18.18 | 0.302      |
 | [Unified Concept Editing (UCE)](https://github.com/rohitgandikota/unified-concept-editing)                   | 21.83   | 79.58    | 17.10 | 0.309      |
 | [Forget-Me-Not (FMN)](https://github.com/SHI-Labs/Forget-Me-Not)                                             | 88.03   | 97.89    | 16.86 | 0.308      |
 | [concept-SemiPermeable Membrane (SPM)](https://github.com/Con6924/SPM)                                       | 54.93   | 91.55    | 17.48 | 0.310      |
 
-<br>
 
-FULL UnlearnDiffAtk Unlearned DM benchmark can be found in [Huggingface](https://huggingface.co/spaces/Intel/UnlearnDiffAtk-Benchmark)!
+### We will evaluate your model on UnlearnDiffAtk Benchmark! 
+Open a [github issue](https://github.com/OPTML-Group/Diffusion-MU-Attack/issues) or email us at zhan1853@msu.edu!
+
+<strong>FULL UnlearnDiffAtk Unlearned DM benchmark</strong> can be found in [Huggingface](https://huggingface.co/spaces/Intel/UnlearnDiffAtk-Benchmark)!
 
 <br>
 
