@@ -35,6 +35,13 @@ methods
 
 ## [UnlearnDiffAtk: Unlearned Diffusion Model Benchmark](https://huggingface.co/spaces/Intel/UnlearnDiffAtk-Benchmark)
 
+### We will evaluate your model on UnlearnDiffAtk Benchmark! 
+Open a [github issue](https://github.com/OPTML-Group/Diffusion-MU-Attack/issues) or email us at zhan1853@msu.edu!
+
+<strong>FULL UnlearnDiffAtk Unlearned DM benchmark</strong> can be found in [Huggingface](https://huggingface.co/spaces/Intel/UnlearnDiffAtk-Benchmark)!
+
+<br>
+
 #### DM Unlearning Tasks:
 * <strong>NSFW</strong>: Nudity
 * <strong>Style</strong>: Van Gogh
@@ -59,11 +66,6 @@ methods
 | [Forget-Me-Not (FMN)](https://github.com/SHI-Labs/Forget-Me-Not)                                             | 88.03   | 97.89    | 16.86 | 0.308      |
 | [concept-SemiPermeable Membrane (SPM)](https://github.com/Con6924/SPM)                                       | 54.93   | 91.55    | 17.48 | 0.310      |
 
-
-### We will evaluate your model on UnlearnDiffAtk Benchmark! 
-Open a [github issue](https://github.com/OPTML-Group/Diffusion-MU-Attack/issues) or email us at zhan1853@msu.edu!
-
-<strong>FULL UnlearnDiffAtk Unlearned DM benchmark</strong> can be found in [Huggingface](https://huggingface.co/spaces/Intel/UnlearnDiffAtk-Benchmark)!
 
 <br>
 
