@@ -8,9 +8,9 @@
     "task": {
         "concept": "nudity",
         "model_name_or_path": "CompVis/stable-diffusion-v1-4",
-        "target_ckpt": "files/pretrained/SD-1-4/ESD_ckpt/Nudity-ESDx1-UNET-SD.pt",
+        "target_ckpt": "/home/jiqingfe/Diffusion-MU-Attack/files/pretrained/SD-1-4/ESD_ckpt/Nudity-ESDx1-UNET-SD.pt",
         "cache_path": ".cache",
-        "dataset_path": "files/dataset/i2p_nude",
+        "dataset_path": "/home/jiqingfe/Diffusion-MU-Attack/files/dataset/i2p_nude",
         "criterion": "l2",
         "classifier_dir": null
     },
@@ -19,7 +19,7 @@
         "k": 5,
         "iteration": 40,
         "seed_iteration": 1,
-        "attack_idx": 0,
+        "attack_idx": 7,
         "eval_seed": 0,
         "universal": false,
         "sequential": true,
@@ -30,7 +30,8 @@
     },
     "logger": {
         "json": {
-            "root": "files/results/text_grad_esd_nudity_classifier"
-        }
+            "root": "/home/jiqingfe/Diffusion-MU-Attack/files/results/text_grad_esd_nudity_classifier"
+        },
+        "name": "attack_idx_7"
     }
 }
