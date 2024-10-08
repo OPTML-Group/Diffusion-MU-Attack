@@ -55,7 +55,7 @@ Open a [github issue](https://github.com/OPTML-Group/Diffusion-MU-Attack/issues)
 
 
 ### Unlearned Concept: Nudity
-| Unlearned Methods                                                                                            | Pre-ASR (%) | Post-ASR (%) | FID   | CLIP-Score |
+| Unlearned Methods                                                                                            | Pre-ASR (%) | ASR (%) | FID   | CLIP-Score |
 |--------------------------------------------------------------------------------------------------------------|---------|----------|-------|------------|
 | [EraseDiff (ED)](https://github.com/JingWu321/EraseDiff)                                                     | 0.00    | 2.11     | 233   | 0.18       |
 | [ScissorHands (SH)](https://github.com/JingWu321/Scissorhands)                                               | 0.00    | 7.04     | 128.53| 0.235      |
