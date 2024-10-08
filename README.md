@@ -131,11 +131,11 @@ For ```style```:
 ## Citation
 
 ```
-@article{zhang2023generate,
-  title={To Generate or Not? Safety-Driven Unlearned Diffusion Models Are Still Easy To Generate Unsafe Images... For Now},
+@article{zhang2024generate,
+  title={To generate or not? safety-driven unlearned diffusion models are still easy to generate unsafe images... for now},
   author={Zhang, Yimeng and Jia, Jinghan and Chen, Xin and Chen, Aochuan and Zhang, Yihua and Liu, Jiancheng and Ding, Ke and Liu, Sijia},
-  journal={arXiv preprint arXiv:2310.11868},
-  year={2023}
+  journal={European Conference on Computer Vision (ECCV)},
+  year={2024}
 }
 ```
 <br>
