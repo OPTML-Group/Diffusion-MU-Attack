@@ -153,7 +153,7 @@ if __name__=='__main__':
     parser.add_argument('--prompts_path', help='path to csv file with prompts', type=str, required=True)
     parser.add_argument('--concept', help='concept to attack', type=str, required=True)
     parser.add_argument('--save_path', help='folder where to save images', type=str, required=True)
-    parser.add_argument('--device', help='cuda device to run on', type=str, required=False, default='cuda:0')
+    parser.add_argument('--device', help='cuda device to run on', type=str, required=False, default='cpu')
     parser.add_argument('--guidance_scale', help='guidance to run eval', type=float, required=False, default=7.5)
     parser.add_argument('--image_size', help='image size used to train', type=int, required=False, default=512)
     parser.add_argument('--from_case', help='continue generating from case_number', type=int, required=False, default=0)
