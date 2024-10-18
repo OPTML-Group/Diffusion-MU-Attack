@@ -3,7 +3,7 @@
 # [ECCV 2024] <br> UnlearnDiffAtk:<br>To Generate or Not? <br> Safety-Driven Unlearned Diffusion Models <br> Are Still Easy To Generate Unsafe Images <br> ... For Now
 </div>
 
-###  [Project Website](https://www.optml-group.com/posts/mu_attack) | [Arxiv Preprint](https://arxiv.org/abs/2310.11868) | [Unlearned DM Benchmark](https://huggingface.co/spaces/Intel/UnlearnDiffAtk-Benchmark) | [Demo](https://huggingface.co/spaces/Intel/UnlearnDiffAtk)
+###  [Project Website](https://www.optml-group.com/posts/mu_attack) | [Arxiv Preprint](https://arxiv.org/abs/2310.11868) | [Unlearned DM Benchmark](https://huggingface.co/spaces/Intel/UnlearnDiffAtk-Benchmark) | [Demo](https://huggingface.co/spaces/Intel/UnlearnDiffAtk)  | [Poster](https://damon-demon.github.io/links/ECCV24_UnlearnDiffAtk_poster.pdf)
 
 Welcome to the official implementation of <strong>UnlearnDiffAtk</strong>, which capitalizes on the intrinsic classification abilities of Diffusion Models (DMs) to <strong>simplify the creation of adversarial prompts</strong>, thereby eliminating the need for auxiliary classification or diffusion models.Through extensive benchmarking, we <strong>evaluate the robustness</strong> of five widely-used safety-driven unlearned DMs (i.e., DMs after unlearning undesirable concepts, styles, or objects) across a variety of tasks.
 <table align="center">
