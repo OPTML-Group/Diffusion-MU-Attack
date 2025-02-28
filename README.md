@@ -51,7 +51,9 @@ Open a [github issue](https://github.com/OPTML-Group/Diffusion-MU-Attack/issues)
  * Pre-Attack Success Rate (<strong>Pre-ASR</strong>): lower is better;
  * Post-Attack Success Rate (<strong>Post-ASR</strong>): lower is better;
  * Fréchet inception distance(<strong>FID</strong>): evaluate distributional quality of image generations, lower is better;
- * <strong>CLIP Score</strong>: measure contextual alignment with prompt descriptions, higher is better. 
+ * <strong>CLIP Score</strong>: measure contextual alignment with prompt descriptions, higher is better.
+
+Detailed instructions for performing utility evaluations (FID and CLIP score) are available in our DM Unlearning project, [AdvUnlearn](https://github.com/OPTML-Group/AdvUnlear). This repository includes guidance on downloading the COCO-10k dataset and provides scripts for calculating both FID and CLIP scores.
 
 
 ### Unlearned Concept: Nudity
